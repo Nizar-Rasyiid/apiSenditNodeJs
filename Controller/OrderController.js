@@ -13,3 +13,13 @@ exports.getPemesananById = async (req, res) => {
     res.status(500).send("Server error bang");
   }
 };
+
+exports.getPemesanan = async (req, res) => {
+  try {
+    const pemesanan = await Pemesanan.findAll();
+    res.json(pemesanan);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server error");
+  }
+};

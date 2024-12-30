@@ -28,6 +28,10 @@ const Pemesanan = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    updated_lokasi: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     status: {
       type: DataTypes.STRING,
       allowNull: false,
